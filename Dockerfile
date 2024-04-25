@@ -24,4 +24,4 @@ COPY app .
 RUN chmod a+x /app/entrypoint.sh
 
 EXPOSE 8080
-ENTRYPOINT [ "/app/entrypoint.sh", "hang" ]
+ENTRYPOINT [ "/app/entrypoint.sh", "start" ]
