@@ -23,5 +23,7 @@ COPY app .
 
 RUN chmod a+x /app/entrypoint.sh
 
+RUN mkdir tmp
+
 EXPOSE 8080
 ENTRYPOINT [ "/app/entrypoint.sh", "start" ]
