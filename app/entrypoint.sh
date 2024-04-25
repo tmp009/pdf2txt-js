@@ -4,7 +4,7 @@ set -eEuo pipefail
 
 case "$1" in
   start)
-    exec node index.mjs
+    exec npm run start
     ;;
   test)
     exec npm run test
