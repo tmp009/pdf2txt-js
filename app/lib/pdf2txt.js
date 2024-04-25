@@ -4,7 +4,7 @@ const path = require('path')
 
 class Pdf2Txt {
     constructor(filename) {
-        this.bin = "/usr/local/bin/pdf2txt"
+        this.bin = "/usr/local/bin/pdftotxt"
         this.filename = filename
     }
 
