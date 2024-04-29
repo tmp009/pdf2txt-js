@@ -40,6 +40,9 @@ app.post('/convert/pdf', upload.single('file'), async (req, res) => {
     try {
         await pdf.extract(0, null, fileOut)
 
+        const data = await fs.readFile(fileOut, {encoding: 'utf-8'});
+        await fs.writeFile(fileOut, data.replaceAll('\x0C', '[PAGE BREAK]'))
+
         res.sendFile(fileOut, {
             headers: {
                 'Content-Disposition': `attachment; filename="converted.pdf"`
