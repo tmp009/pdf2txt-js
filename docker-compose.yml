@@ -5,6 +5,4 @@ services:
     build: .
     image: tmp009/pdf2txt:latest
     ports:
-      - '3000:3000'
-    volumes:
-      - './app:/app'
+      - '8080:8080'
